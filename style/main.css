@@ -237,6 +237,7 @@ nav {
   flex-wrap: wrap;
   width: 350px;
   height: 290px;
+  
   background-color: #262542;
   border: 3px solid #372c85;
   border-radius: 25px;
@@ -433,6 +434,53 @@ flex-direction: column;
   100% {
     transform: scale(1.0);
   }
+}
+
+/* DISCUSS SECTION */
+.disc {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+.disc_step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 150px;
+}
+
+.disc_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #25253e;
+}
+
+.h2_disc {
+  padding: 7px 14px;
+  background-color: #c3ffff;
+  border-radius: 50%;
+
+  color: #1e1d26;
+}
+
+.p_disc {
+  color: #fff;
+  letter-spacing: 1.3px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.h2_disc_1 {
+  padding: 6px 15px;
 }
 
 /* F O O T E R */
