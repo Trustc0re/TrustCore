@@ -7,20 +7,26 @@
 /* Fonts - everything */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-  /* COLOR */
-  --background: #1e1d26;
-  --foter: #1e1d26;
+:root, [data-theme='dark'] {
+  --background-color: #1e1d26;
+  --text-muted: #c7c7c7;
+  --white-p: #fff;
   --accent: #9102ff;
   --accent-pink: #ff4a7b;
+}
 
-  --text-muted: #c7c7c7;
+/* T h e m e */
+[data-theme='light'] {
+  --background-color: #fff;
+  --text-muted: #1e1d26;
+  --white-p: #1e1d26;
 }
 
 html {
-  background-color: var(--background);
+  background-color: var(--background-color);
   font-family: 'Work Sans', sans-serif;
   scroll-behavior: smooth;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 /* H E A D E R */
@@ -57,6 +63,27 @@ nav {
   gap: 30px;
 }
 
+/* Icon theme */
+.icon-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #212945;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.icon-theme:hover {
+  transition: 0.3s;
+  transform: scale(1.2);
+}
+
+.icon-theme:active {
+  transform: scale(0.7);
+}
+/* Burger menu */
 .burger {
   display: none;
   width: 44px;
@@ -72,7 +99,7 @@ nav {
   height: 3px;
   margin: 6px 0;
   border-radius: 5px;
-  background: #fff;
+  background: var(--white-p);
   transition: 0.3s;
 }
 
@@ -117,7 +144,7 @@ nav {
 .box_left h1 {
   margin-bottom: 30px;
 
-  color: #fff;
+  color: var(--white-p);
   font-size: 40px;
   letter-spacing: 2px;
 }
@@ -473,7 +500,7 @@ flex-direction: column;
 }
 
 .p_disc {
-  color: #fff;
+  color: var(--white-p);
   letter-spacing: 1.3px;
   font-weight: 500;
   text-align: center;
@@ -516,7 +543,6 @@ footer {
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* Ссылка внутри круга должна занимать 100% места и центрировать картинку */
 .wrapper .icon a {
   display: flex;
   align-items: center;
@@ -602,7 +628,7 @@ footer {
 }
 
 .support a {
-  color: #fff;
+  color: var(--white-p);
   letter-spacing: 1.5px;
   cursor: pointer;
   font-size: 20px;
