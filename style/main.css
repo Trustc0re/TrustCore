@@ -12,12 +12,14 @@
   --text-muted: #c7c7c7;
   --white-p: #fff;
   --accent: #9102ff;
+  --bg-noll: #35353500;
   --accent-pink: #ff4a7b;
 }
 
 /* T h e m e */
 [data-theme='light'] {
   --background-color: #fff;
+  --bg-noll: #1e1d26;
   --text-muted: #1e1d26;
   --white-p: #1e1d26;
 }
@@ -33,6 +35,7 @@ html {
 header {
   padding: 20px 20px;
   background-color: var(--header);
+  background-color: var(--bg-noll);
 }
 
 /* NAVIGATION */
@@ -99,13 +102,13 @@ nav {
   height: 3px;
   margin: 6px 0;
   border-radius: 5px;
-  background: var(--white-p);
+  background: #fff;
   transition: 0.3s;
 }
 
 .nav_list a {
   font-size: 20px;
-  color: var(--text-muted);
+  color: #c7c7c7;
 }
 
 .nav_list a:hover {
@@ -338,7 +341,7 @@ nav {
   padding: 0 10px;
   font-size: 14px;
   letter-spacing: 1.5px;
-  color: var(--text-muted);
+  color: #fff;
 }
 
 /* mini T e x t web */
@@ -406,7 +409,7 @@ flex-direction: column;
 }
 
 .services_left li {
-  color: #fff;
+  color: var(--text-muted);
   font-size: 20px;
   letter-spacing: 1.5px;
   line-height: 2;
